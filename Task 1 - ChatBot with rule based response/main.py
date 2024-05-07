@@ -31,7 +31,7 @@ rules_responses = {
     "what's your favorite color": ["I don't have eyes, but I've heard good things about blue!", "I'm a chatbot, so I don't have preferences for colors!"],
     "are you a cat person or a dog person": ["I don't have preferences for pets, but both cats and dogs are adorable!", "I'm a chatbot, so I don't have opinions on pets!"],
     "what's your dream vacation destination": ["I don't have dreams, but a virtual vacation sounds nice!", "Anywhere with a stable internet connection would be ideal for me!"],
-    # Add more rules and responses as needed
+    # Add more rules and responses as needed based on user input patterns and context of conversation 
 }
 
 # Function to preprocess user input using spaCy
