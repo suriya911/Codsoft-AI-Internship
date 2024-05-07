@@ -38,7 +38,6 @@ rules_responses = {
 def preprocess_input(user_input):
     doc = nlp(user_input.lower())
     processed_input = " ".join([token.lemma_ for token in doc])
-    print("Processed input:", processed_input)  # Debugging line
     return processed_input
 
 # Function to generate response based on preprocessed user input
