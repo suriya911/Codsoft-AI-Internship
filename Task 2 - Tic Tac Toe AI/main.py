@@ -10,6 +10,15 @@ board = [
     [0, 0, 0],
     [0, 0, 0],
 ]
+    
+def new_board():
+    global board
+    board = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+    ]
+
 
 
 def evaluate(state):
@@ -239,6 +248,7 @@ def main():
     """
     Main function that calls all functions
     """
+    new_board()
     clean()
     h_choice = ''  # X or O
     c_choice = ''  # X or O
@@ -265,12 +275,13 @@ def main():
 
     # Main loop of this game
     while len(empty_cells(board)) > 0 and not game_over(board):
-        if first == 'N':
+        if first == -1:
             ai_turn(c_choice, h_choice)
-            first = ''
-
-        human_turn(c_choice, h_choice)
-        ai_turn(c_choice, h_choice)
+            human_turn(c_choice,h_choice)
+        else:
+            human_turn(c_choice, h_choice)
+            ai_turn(c_choice, h_choice)
+    print(board)
 
     # Game over message
     if wins(board, HUMAN):
